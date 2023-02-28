@@ -12,7 +12,8 @@
   "dependencies": {
     "get-port": "4.0.0",
     "koa": "2.5.2",
-    "koa-static": "5.0.0"
+    "koa-static": "5.0.0",
+    "navigo": "^8.11.1"
   },
   "devDependencies": {
     "prettier": "^2.8.4"
