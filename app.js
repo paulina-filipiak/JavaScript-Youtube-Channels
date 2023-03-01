@@ -1,5 +1,9 @@
-import ChannelsList from './components/ChannelsList'
-
+import ChannelsList from "./components/ChannelsList.js"
+import  mockData from './static/channels.json' assert {type: 'json'}
 const App = () => {
-  ChannelsList
+  console.log('Im working!')
+  console.log('mockData is', mockData)
+  return ChannelsList(mockData)
 }
+
+export default App()

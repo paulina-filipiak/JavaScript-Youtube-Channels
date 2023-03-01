@@ -1,4 +1,4 @@
-export const SingleChannelCard = (channel) => {
+function SingleChannelCard(channel) {
   const channelName = channel.title
   const channelUrl = channel.customUrl
   const channelImg = channel.thumbnails.default.url
@@ -8,7 +8,7 @@ export const SingleChannelCard = (channel) => {
 
   return /* HTML */ ` <a
     class="card"
-    href="${channelUrl.slice(1, -1)}/?utm_campaign=${'12.12.2022'}"
+    href="${channelUrl}/?utm_campaign=${'12.12.2022'}"
     target="blank"
   >
     <img src=${channelImg} />
@@ -31,3 +31,5 @@ export const SingleChannelCard = (channel) => {
     </div>
   </a>`
 }
+
+export default SingleChannelCard

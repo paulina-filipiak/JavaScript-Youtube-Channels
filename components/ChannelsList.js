@@ -1,8 +1,10 @@
-import { SingleChannelCard } from './singleChannelCard'
-import { View } from '../utils/View'
+import SingleChannelCard from './singleChannelCard.js'
+import { View } from '../utils/View.js'
 
-export default ChannelsList = (channels) => {
+function ChannelsList(channels) {
   return (View.innerHTML = `<div>${channels
     .map((channel) => SingleChannelCard(channel))
     .join('')}</div>`)
 }
+
+export default ChannelsList
