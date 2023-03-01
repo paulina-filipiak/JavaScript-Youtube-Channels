@@ -1,9 +1,5 @@
-import { view } from "./utils/view"
+import ChannelsList from './components/ChannelsList'
 
-class App {
-  constructor() {
-    new RouterHandler()
-  }
+const App = () => {
+  ChannelsList
 }
-
-new App()
