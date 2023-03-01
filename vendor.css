@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 html {
   line-height: 1.15;
@@ -9,14 +9,29 @@ body {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+h4 {
+  font-size: 1.1em;
+  margin: 0;
+}
+
 b,
 strong {
   font-weight: bolder;
+}
+
+p {
+  font-size: 0.9em;
+  margin: 0;
 }
 
 button,
@@ -86,6 +101,41 @@ button:-moz-focusring {
   background: #ff7b33;
 }
 
+.wrapper__card {
+  background: #fff;
+  padding: 8px 24px 24px 24px;
+}
+
+.wrapper__card > img {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: fill;
+  border-radius: 50%;
+  border: 4px solid #eceff1;
+}
+
+.card__name {
+  width: auto;
+  font-size: 1.4em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.card__statistics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__statistics > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .choice {
   cursor: pointer;
   margin-top: 16px;
@@ -119,7 +169,7 @@ button:-moz-focusring {
   border: 1px solid #aaa;
   border-radius: 2px;
   box-sizing: border-box;
-  content: "";
+  content: '';
   display: inline-block;
   height: 20px;
   margin-left: -28px;
@@ -142,7 +192,7 @@ button:-moz-focusring {
 
 .choice + .choice__label:after {
   background: transparent;
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   transform-origin: top left;
@@ -169,7 +219,7 @@ button:-moz-focusring {
 }
 
 .filter__input {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   vertical-align: top;
@@ -220,7 +270,7 @@ button:-moz-focusring {
 }
 
 .wrapper {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   background: #eceff1;
   display: flex;
   flex-flow: column wrap;
@@ -240,6 +290,10 @@ button:-moz-focusring {
 
 .wrapper__main {
   order: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 @media only screen and (min-width: 544px) {
