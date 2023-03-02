@@ -10,6 +10,10 @@ function SingleChannelCard(channel) {
     class="wrapper__card"
     href="${channelUrl}/?utm_campaign=${'12.12.2022'}"
     target="blank"
+    data-title="${channelName.toLowerCase()}"
+    data-subscribers="${ChannelSubscribers}"
+    data-videos="${channelVideos}"
+    data-views="${channelViews}"
   >
     <img src=${channelImg} />
     <div "card__info">
