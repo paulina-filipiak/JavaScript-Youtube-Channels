@@ -6,6 +6,7 @@ import { cardSorter } from "./components/cardSorter.js"
 
 const App = () => {
   visitCounter()
+  let data = mockData
   const searchBar = document.querySelector(".filter__input")
   const checkboxes = document.querySelectorAll(".choice--radio")
   let filteredData = mockData
