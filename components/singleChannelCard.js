@@ -9,7 +9,7 @@ function SingleChannelCard(channel) {
 
   return /* HTML */ ` <a
     class="wrapper__card"
-    href="${channelUrl}/?utm_campaign=${new Date()}"
+    href="${channelUrl}/?utm_campaign=${+ new Date()}"
     target="blank"
     data-title="${channelName.toLowerCase()}"
     data-subscribers="${ChannelSubscribers}"
