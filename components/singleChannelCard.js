@@ -6,9 +6,10 @@ function SingleChannelCard(channel) {
   const channelVideos = channel.statistics.videoCount.replaceAll(',', '').replaceAll('.', '').replaceAll(' ', '')
   const channelViews = channel.statistics.viewCount.replaceAll(',', '').replaceAll('.', '').replaceAll(' ', '')
 
+
   return /* HTML */ ` <a
     class="wrapper__card"
-    href="${channelUrl}/?utm_campaign=${'12.12.2022'}"
+    href="${channelUrl}/?utm_campaign=${new Date()}"
     target="blank"
     data-title="${channelName.toLowerCase()}"
     data-subscribers="${ChannelSubscribers}"
