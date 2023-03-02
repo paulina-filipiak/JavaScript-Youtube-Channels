@@ -1,1 +1,1 @@
-export const View = document.querySelector('.js-content')
+export const view = document.querySelector(".js-content")

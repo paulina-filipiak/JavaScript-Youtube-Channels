@@ -1,4 +1,4 @@
-function SingleChannelCard(channel) {
+const SingleChannelCard = (channel) => {
 	const channelName = channel.title
 	const channelUrl = channel.customUrl
 	const channelImg = channel.thumbnails.medium.url

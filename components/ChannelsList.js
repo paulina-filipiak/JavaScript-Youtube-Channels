@@ -1,8 +1,8 @@
 import SingleChannelCard from "./SingleChannelCard.js"
-import { View } from "../utils/View.js"
+import { view } from "../utils/view.js"
 
-function ChannelsList(channels) {
-	return (View.innerHTML = `${channels
+const ChannelsList = (channels) => {
+	return (view.innerHTML = `${channels
 		.map((channel) => SingleChannelCard(channel))
 		.join("")}`)
 }

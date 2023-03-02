@@ -50,7 +50,7 @@ export const CardSorter = (event) => {
 		return 0
 	}
 
-	function sortDataByTitle() {
+	const sortDataByTitle = () => {
 		const cardsArray = Array.from(cardsFromDOM)
 		let sorted = cardsArray.sort(sortByTitle)
 		sorted.forEach((el) =>
@@ -58,7 +58,7 @@ export const CardSorter = (event) => {
 		)
 	}
 
-	function sortDataBySubscribers() {
+	const sortDataBySubscribers = () => {
 		const cardsArray = Array.from(cardsFromDOM)
 		let sorted = cardsArray.sort(sortBySubscribers)
 		sorted.forEach((el) =>
@@ -66,7 +66,7 @@ export const CardSorter = (event) => {
 		)
 	}
 
-	function sortDataByVideos() {
+	const sortDataByVideos = () => {
 		const cardsArray = Array.from(cardsFromDOM)
 		let sorted = cardsArray.sort(sortByVideos)
 		sorted.forEach((el) =>
@@ -74,7 +74,7 @@ export const CardSorter = (event) => {
 		)
 	}
 
-	function sortDataByViews() {
+	const sortDataByViews = () => {
 		const cardsArray = Array.from(cardsFromDOM)
 		let sorted = cardsArray.sort(sortByViews)
 		sorted.forEach((el) =>
@@ -95,5 +95,6 @@ export const CardSorter = (event) => {
 		case "sort-views":
 			sortDataByViews()
 			break
+		default:
 	}
 }
