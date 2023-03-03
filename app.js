@@ -2,7 +2,6 @@ import ChannelsList from "./components/ChannelsList.js"
 import mockData from "./static/channels.json" assert { type: "json" }
 import VisitCounter from "./components/VisitsCounter.js"
 import { CardSorter } from "./components/CardSorter.js"
-// import { fetchData } from "./utils/fetchData.js"
 
 const App = () => {
 	VisitCounter()
