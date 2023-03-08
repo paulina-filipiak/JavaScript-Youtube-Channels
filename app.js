@@ -9,7 +9,7 @@ const App = () => {
 	let data = mockData
 	const searchBar = document.querySelector(".filter__input")
 	const checkboxes = document.querySelectorAll(".choice--radio")
-	const clearButton = document.querySelector(".button")
+	const clearButton = document.querySelector(".button__clear")
 	const form = document.querySelector("form")
 	let filteredData = data
 
