@@ -92,6 +92,12 @@ button:-moz-focusring {
 	text-transform: uppercase;
 }
 
+.button__ascending {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .button:active {
 	background: #ff9c66;
 }
@@ -278,6 +284,13 @@ button:-moz-focusring {
 	-ms-grid-rows: 80px 56px 1fr;
 	grid-template-columns: 20% 80%;
 	grid-template-rows: 80px 56px 1fr;
+}
+
+.wrapper__buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 10px;
 }
 
 .wrapper__header {
