@@ -2,6 +2,7 @@ import ChannelsList from "./components/ChannelsList.js"
 import mockData from "./static/channels.json" assert { type: "json" }
 import VisitCounter from "./components/VisitsCounter.js"
 import { CardSorter } from "./components/CardSorter.js"
+import { ResetSorter } from "./components/ResetSorter.js"
 
 const App = () => {
 	VisitCounter()
@@ -12,11 +13,7 @@ const App = () => {
 	const form = document.querySelector("form")
 	let filteredData = data
 
-	clearButton.addEventListener("click", () => {
-		form.reset()
-		searchBar.value = ""
-		return ChannelsList(data)
-	})
+	clearButton.addEventListener("click", ResetSorter)
 
 	checkboxes.forEach((checkbox) =>
 		checkbox.addEventListener("click", CardSorter)
