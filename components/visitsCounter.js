@@ -1,23 +1,19 @@
 const VisitCounter = () => {
-	let visitCount = localStorage.getItem("page_views")
+	let visitCount = localStorage.getItem("page_view")
 	visitCount = Number(visitCount) !== 0 ? Number(visitCount) + 1 : 1
-	localStorage.setItem("page_views", visitCount)
+	localStorage.setItem("page_view", visitCount)
 
-	const presentDate = new Date()
-	const options = {
-		year: "numeric",
-		month: "short",
-		day: "numeric",
-	}
+	const date = new Date()
+	let day = date.getDate()
+	let month = date.getMonth() + 1
+	let year = date.getFullYear()
 
-	const lastVisitDate = localStorage.getItem("present_visit_date")
-	const date = `${presentDate.toLocaleDateString("pl", options)}`
-
-	localStorage.setItem("present_visit_date", date)
-	if (lastVisitDate) {
-		localStorage.setItem("present_visit_date", date)
-		localStorage.setItem("last_visit_date", lastVisitDate)
-	}
+	let dateCount = localStorage.getItem("date_view")
+	dateCount =
+		Number(dateCount) !== ""
+			? `${day}-${month}-${year}`
+			: localStorage.getItem("date_view")
+	localStorage.setItem("date_view", dateCount)
 }
 
 export default VisitCounter

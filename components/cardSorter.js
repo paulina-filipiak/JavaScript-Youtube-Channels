@@ -2,6 +2,7 @@
 // 	const checkboxId = event.target.id
 // 	const cardsFromDOM = document.querySelectorAll(".wrapper__card")
 
+
 // 	const sortByTitle = (cardOne, cardTwo) => {
 // 		return cardOne
 // 			.getAttribute("data-title")
@@ -34,6 +35,7 @@
 // 			document.querySelector(".js-content").appendChild(el)
 // 		)
 // 	}
+
 
 // 	const sortDataBySubscribers = () => {
 // 		const cardsArray = Array.from(cardsFromDOM)

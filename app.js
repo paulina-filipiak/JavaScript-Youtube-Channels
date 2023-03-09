@@ -8,12 +8,14 @@ import {
 	sortByViews,
 } from "./components/CardSorterThree.js"
 
+
 const App = () => {
 	VisitCounter()
 	let data = mockData
 	let filteredData = JSON.parse(JSON.stringify(data))
 	const form = document.querySelector("form")
 	const searchBar = document.querySelector(".filter__input")
+
 	const clearButton = document.querySelector(".button__clear")
 	const reverseButton = document.querySelector(".button__ascending")
 	const checkboxes = document.querySelectorAll(".choice--radio")
@@ -41,6 +43,7 @@ const App = () => {
 	reverseButton.addEventListener("click", () => {
 		filteredData.reverse()
 		return ChannelsList(filteredData)
+
 	})
 
 	clearButton.addEventListener("click", () => {
