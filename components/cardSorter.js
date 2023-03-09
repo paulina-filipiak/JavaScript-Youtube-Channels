@@ -2,33 +2,56 @@ export const CardSorter = (event) => {
 	const checkboxId = event.target.id
 	const cardsFromDOM = document.querySelectorAll(".wrapper__card")
 
-	const sortByTitle = (cardOne, cardTwo) => {
-		return cardOne
-			.getAttribute("data-title")
-			.localeCompare(cardTwo.getAttribute("data-title"))
+	const sortByTitle = (a, b) => {
+		if (a.getAttribute("data-title") < b.getAttribute("data-title")) return -1
+		if (a.getAttribute("data-title") > b.getAttribute("data-title")) return 1
+		return 0
 	}
 
-	const sortBySubscribers = (cardOne, cardTwo) => {
-		return (
-			cardTwo.getAttribute("data-subscribers") -
-			cardOne.getAttribute("data-subscribers")
+	const sortBySubscribers = (a, b) => {
+		if (
+			Number(a.getAttribute("data-subscribers")) <
+			Number(b.getAttribute("data-subscribers"))
 		)
+			return 1
+		if (
+			Number(a.getAttribute("data-subscribers")) >
+			Number(b.getAttribute("data-subscribers"))
+		)
+			return -1
+		return 0
 	}
 
-	const sortByVideos = (cardOne, cardTwo) => {
-		return (
-			cardTwo.getAttribute("data-videos") - cardOne.getAttribute("data-videos")
+	const sortByVideos = (a, b) => {
+		if (
+			Number(a.getAttribute("data-videos")) <
+			Number(b.getAttribute("data-videos"))
 		)
+			return 1
+		if (
+			Number(a.getAttribute("data-videos")) >
+			Number(b.getAttribute("data-videos"))
+		)
+			return -1
+		return 0
 	}
 
-	const sortByViews = (cardOne, cardTwo) => {
-		return (
-			cardTwo.getAttribute("data-views") - cardOne.getAttribute("data-views")
+	const sortByViews = (a, b) => {
+		if (
+			Number(a.getAttribute("data-views")) <
+			Number(b.getAttribute("data-views"))
 		)
+			return 1
+		if (
+			Number(a.getAttribute("data-views")) >
+			Number(b.getAttribute("data-views"))
+		)
+			return -1
+		return 0
 	}
 
 	const sortDataByTitle = () => {
-		const cardsArray = Array.from(cardsFromDOM) //method creates a new array from an existing one, or from an array-like object (which is what a NodeList is)
+		const cardsArray = Array.from(cardsFromDOM)
 		let sorted = cardsArray.sort(sortByTitle)
 		sorted.forEach((el) =>
 			document.querySelector(".js-content").appendChild(el)
