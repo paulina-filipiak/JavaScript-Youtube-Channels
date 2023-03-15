@@ -16,9 +16,10 @@ const SingleChannelCard = (channel) => {
 		.replaceAll(" ", "")
 
 	return /* HTML */ ` <a
+  href="${channelUrl}/?utm_campaign=${+new Date()}"
+  target="blank">
+  <section
     class="wrapper__card"
-    href="${channelUrl}/?utm_campaign=${+new Date()}"
-    target="blank"
     data-title="${channelName.toLowerCase()}"
     data-subscribers="${channelSubscribers}"
     data-videos="${channelVideos}"
@@ -42,6 +43,7 @@ const SingleChannelCard = (channel) => {
         </div>
       </div>
     </div>
+  </section>
   </a>`
 }
 
